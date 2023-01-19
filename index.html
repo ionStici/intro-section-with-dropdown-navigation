@@ -13,20 +13,87 @@
 </head>
 <body>
 
-  <!-- Features
-  Company
-  Careers
-  About
+    <header class="header">
+        <img class="logo" src="./images/logo.svg" alt="Logo">
+        <button class="open-menu-btn"><svg width="32" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#151515" fill-rule="evenodd"><path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z"/></g></svg></button>
+        
+        <div class="nav__bg"></div>
+        <nav class="nav">
+            <img class="nav__close-btn" src="./images/icon-close-menu.svg" alt="">
 
-  Login
-  Register
+            <ul class="nav__ul">
+                <li><a class="features-btn" href="#">
+                    <span>Features</span>
+                    <img class="nav__features-arrow" src="./images/icon-arrow-down.svg" alt="">
+                </a></li>
 
-  Make remote work
+                <ul class="sub-nav closed">
+                    <li><a href="#">
+                            <img src="./images/icon-todo.svg" alt="">
+                            <span>Todo List</span>
+                    </a></li>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+                    <li><a href="#">
+                            <img src="./images/icon-calendar.svg" alt="">
+                            <span>Calendar</span>
+                    </a></li>
 
-  Learn more -->
+                    <li><a href="#">
+                            <img src="./images/icon-reminders.svg" alt="">
+                            <span>Reminders</span>
+                    </a></li>
+
+                    <li><a href="#">
+                            <img src="./images/icon-planning.svg" alt="">
+                            <span>Planning</span>
+                    </a></li>
+                </ul>
+
+                <li><a class="company-btn" href="#">
+                    <span>Company</span>
+                    <img class="nav__company-arrow" src="./images/icon-arrow-down.svg" alt="">
+                </a></li>
+
+                <ul class="second-sub-nav closed">
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+
+                <li><a href="#">Careers</a></li>
+
+                <li><a href="#">Blog</a></li>
+            </ul>
+
+            <div class="nav__acc">
+                <a class="nav__login" href="#">Login</a>
+                <a class="nav__register" href="#">Register</a>
+            </div>
+        
+        </nav>
+    </header>
+
+    <main class="main">
+        <picture>
+            <source srcset="./images/image-hero-mobile.png" media="(max-width: 1009px)">
+            <source srcset="./images/image-hero-desktop.png" media="(min-width: 1010px)">
+            <img class="hero-img" src="./images/image-hero-mobile.png" alt="Someone working remotely">
+        </picture>
+
+        <div class="cta">
+            <h1 class="h1">Make remote work</h1>
+            <p class="p">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+            <button class="btn">Learn more</button>
+
+            <div>
+                <img class="lg" src="./images/client-databiz.svg" alt="Databix logo">
+                <img class="lg" src="./images/client-audiophile.svg" alt="Audiophile logo">
+                <img class="lg" src="./images/client-meet.svg" alt="Client meet logo">
+                <img class="lg" src="./images/client-maker.svg" alt="Client maker logo">
+            </div>
+        </div>
+
+    </main>
   
 </body>
 </html>
