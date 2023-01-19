@@ -17,6 +17,18 @@ let featuresNavStatus = "closed";
 let companyNavStatus = "closed";
 let mainNavStatus = "closed";
 
+window.addEventListener("resize", function (e) {
+    if (e.currentTarget.innerWidth < 1010) {
+        nav.style.right = "-240px";
+        menuBg.style.opacity = "0";
+        menuBg.style.visibility = "hidden";
+        menuBg.style.pointerEvents = "none";
+    } else {
+        subNav.style.height = "160px";
+        secondSubNav.style.height = "128px";
+    }
+});
+
 const openSubNav = function (nav, featureArrow, companyArrow, height) {
     if ((featureArrow ? featuresNavStatus : companyNavStatus) === "closed") {
         nav.style.transition = "height 0.15s, opacity 0.25s, visibility 0.25s";
@@ -78,10 +90,40 @@ featuresBtn.addEventListener("click", function (e) {
     e.preventDefault();
     if (window.visualViewport.width < 1010)
         openSubNav(subNav, featuresArrow, undefined, 160);
+
+    // prettier-ignore
+    if (window.visualViewport.width >= 1010 && subNav.classList.contains("closed")) {
+        subNav.style.pointerEvents = "all";
+        subNav.style.opacity = "1";
+        subNav.style.visibility = "visible";
+        featuresArrow.setAttribute("src", "./images/icon-arrow-up.svg");
+        subNav.classList.remove("closed");
+    } else if (window.visualViewport.width >= 1010) {
+        subNav.style.pointerEvents = "none";
+        subNav.style.opacity = "0";
+        subNav.style.visibility = "hidden";
+        featuresArrow.setAttribute("src", "./images/icon-arrow-down.svg");
+        subNav.classList.add("closed");
+    }
 });
 
 companyBtn.addEventListener("click", function (e) {
     e.preventDefault();
     if (window.visualViewport.width < 1010)
         openSubNav(secondSubNav, undefined, companyArrow, 118);
+
+    // prettier-ignore
+    if ( window.visualViewport.width >= 1010 && secondSubNav.classList.contains("closed")) {
+        secondSubNav.style.pointerEvents = "all";
+        secondSubNav.style.opacity = "1";
+        secondSubNav.style.visibility = "visible";
+        companyArrow.setAttribute("src", "./images/icon-arrow-up.svg");
+        secondSubNav.classList.remove("closed");
+    } else if (window.visualViewport.width >= 1010) {
+        secondSubNav.style.pointerEvents = "none";
+        secondSubNav.style.opacity = "0";
+        secondSubNav.style.visibility = "hidden";
+        companyArrow.setAttribute("src", "./images/icon-arrow-down.svg");
+        secondSubNav.classList.add("closed");
+    }
 });
