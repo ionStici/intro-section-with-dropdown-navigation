@@ -17,13 +17,53 @@ let featuresNavStatus = "closed";
 let companyNavStatus = "closed";
 let mainNavStatus = "closed";
 
+const fromMobileToDesktop = function () {
+    subNav.style.transition = "height 0.15s";
+    subNav.style.opacity = "0";
+    subNav.style.visibility = "hidden";
+    subNav.style.pointerEvenets = "none";
+    subNav.style.position = "absolute";
+    subNav.style.height = "0";
+
+    secondSubNav.style.transition = "height 0.15s";
+    secondSubNav.style.opacity = "0";
+    secondSubNav.style.visibility = "hidden";
+    secondSubNav.style.pointerEvenets = "none";
+    secondSubNav.style.position = "absolute";
+    secondSubNav.style.height = "0";
+
+    featuresArrow.setAttribute("src", "./images/icon-arrow-down.svg");
+    companyArrow.setAttribute("src", "./images/icon-arrow-down.svg");
+
+    featuresNavStatus = "closed";
+    companyNavStatus = "closed";
+};
+
+const fromDesktopToMobile = function () {
+    subNav.style.pointerEvents = "none";
+    subNav.style.opacity = "0";
+    subNav.style.visibility = "hidden";
+    featuresArrow.setAttribute("src", "./images/icon-arrow-down.svg");
+    subNav.classList.add("closed");
+
+    secondSubNav.style.pointerEvents = "none";
+    secondSubNav.style.opacity = "0";
+    secondSubNav.style.visibility = "hidden";
+    companyArrow.setAttribute("src", "./images/icon-arrow-down.svg");
+    secondSubNav.classList.add("closed");
+};
+
 window.addEventListener("resize", function (e) {
     if (e.currentTarget.innerWidth < 1010) {
+        fromDesktopToMobile();
+
         nav.style.right = "-240px";
         menuBg.style.opacity = "0";
         menuBg.style.visibility = "hidden";
         menuBg.style.pointerEvents = "none";
     } else {
+        fromMobileToDesktop();
+
         subNav.style.height = "160px";
         secondSubNav.style.height = "128px";
     }
@@ -66,6 +106,8 @@ const openSubNav = function (nav, featureArrow, companyArrow, height) {
 };
 
 openMenuBtn.addEventListener("click", function () {
+    fromDesktopToMobile();
+
     nav.style.right = "0";
     menuBg.style.opacity = "0.75";
     menuBg.style.visibility = "visible";
@@ -73,6 +115,8 @@ openMenuBtn.addEventListener("click", function () {
 });
 
 closeMenuBtn.addEventListener("click", function () {
+    fromMobileToDesktop();
+
     nav.style.right = "-240px";
     menuBg.style.opacity = "0";
     menuBg.style.visibility = "hidden";
@@ -80,6 +124,8 @@ closeMenuBtn.addEventListener("click", function () {
 });
 
 menuBg.addEventListener("click", function () {
+    fromMobileToDesktop();
+
     nav.style.right = "-240px";
     menuBg.style.opacity = "0";
     menuBg.style.visibility = "hidden";
