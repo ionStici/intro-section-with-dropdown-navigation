@@ -73,3 +73,15 @@ menuBg.addEventListener("click", function () {
     menuBg.style.visibility = "hidden";
     menuBg.style.pointerEvents = "none";
 });
+
+featuresBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (window.visualViewport.width < 1010)
+        openSubNav(subNav, featuresArrow, undefined, 160);
+});
+
+companyBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (window.visualViewport.width < 1010)
+        openSubNav(secondSubNav, undefined, companyArrow, 118);
+});
