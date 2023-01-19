@@ -258,3 +258,206 @@ body {
 .lg:nth-child(4) {
     height: 17.2px;
 }
+
+@media only screen and (min-width: 1010px) {
+    .header {
+        max-width: 1360px;
+        margin: 0 auto;
+        padding: 21px 40px 67px 40px;
+        justify-content: revert;
+    }
+
+    .open-menu-btn {
+        display: none;
+    }
+
+    .nav__bg {
+        display: none;
+    }
+
+    .nav__close-btn {
+        display: none;
+    }
+
+    .nav {
+        position: revert;
+        width: 100%;
+        height: revert;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav__ul {
+        margin: 0;
+        margin-left: 62px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .nav__ul li:not(:last-child) {
+        margin-bottom: revert;
+    }
+
+    .nav__ul a,
+    .nav__ul a:link,
+    .nav__ul a:visited {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .nav__features-arrow,
+    .nav__company-arrow {
+        margin-left: 9px;
+    }
+
+    .nav__acc {
+        flex-direction: row;
+        align-items: center;
+        width: revert;
+        margin-left: auto;
+    }
+
+    .nav__login,
+    .nav__login:link,
+    .nav__login:visited {
+        margin-bottom: revert;
+        margin-right: 40px;
+
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .nav__register,
+    .nav__register:link,
+    .nav__register:visited {
+        width: revert;
+    }
+
+    .nav__ul {
+        position: relative;
+    }
+
+    .sub-nav {
+        padding: 24px;
+        margin: 0;
+        transition: height 0.15s, opacity 0.25s, visibility 0.25s;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
+        border-radius: 10px;
+        background-color: #fff;
+        width: 153px;
+        height: 160px;
+        position: absolute;
+        top: 36px;
+        left: -73px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition: opacity 0.2s, visibility 0.2s;
+    }
+
+    .sub-nav li:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    .sub-nav a {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .sub-nav img {
+        width: 16px;
+        margin-right: 14px;
+    }
+
+    .second-sub-nav {
+        margin-left: 0;
+        padding-top: 0;
+        margin-bottom: 0;
+        transition: opacity 0.2s, visibility 0.2s;
+        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 24px 25px;
+        width: 116px;
+        height: 128px;
+        position: absolute;
+        top: 36px;
+        left: 121px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .second-sub-nav li:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    .main {
+        max-width: 1209px;
+        padding: 0 32px;
+        display: grid;
+        grid-template-columns: 540px minmax(0, 605px);
+        align-items: center;
+    }
+
+    .hero-img {
+        margin: revert;
+        max-width: 480px;
+        margin-left: auto;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .cta {
+        width: 100%;
+        padding: revert;
+        text-align: left;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .h1 {
+        padding-right: 10px;
+        margin-top: 0;
+        margin-bottom: 48px;
+        font-size: 80px;
+        line-height: 80px;
+        letter-spacing: -1.11111px;
+    }
+
+    .p {
+        padding-right: 60px;
+        margin-bottom: 51px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .btn {
+        margin-bottom: 108px;
+        width: 163px;
+        padding: 15px 0 13px 0;
+
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.25px;
+    }
+
+    .cta div {
+        justify-content: flex-start;
+        gap: 40px;
+    }
+
+    .lg:nth-child(1),
+    .lg:nth-child(2),
+    .lg:nth-child(3),
+    .lg:nth-child(4) {
+        height: revert;
+    }
+}
