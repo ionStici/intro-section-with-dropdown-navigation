@@ -2,19 +2,11 @@
 
 This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5).
 
-<center>
-
 | **Links** | [Solution URL](https://github.com/ionStici/intro-section-with-dropdown-navigation-fem) | [Live Site URL](https://ionstici.github.io/intro-section-with-dropdown-navigation-fem) |
 | --------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 
-</center>
-
-<center>
-
 | **Author** | [GitHub](https://github.com/ionStici) | [Frontend Mentor](https://www.frontendmentor.io/profile/ionStici) | [Twitter](https://twitter.com/ionStici_) |
 | ---------- | ------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------- |
-
-</center>
 
 <br>
 
