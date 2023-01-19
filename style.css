@@ -52,7 +52,138 @@ body {
 }
 
 .nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    right: -240px;
+    transition: right 0.15s;
+    width: 240px;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.nav__close-btn {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.nav__ul {
+    margin: 78px 0 32px 24px;
+    list-style: none;
+}
+
+.nav__ul li:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.nav__ul a,
+.nav__ul a:link,
+.nav__ul a:visited {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #686868;
+    transition: color 0.1s;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.nav__ul a:hover {
+    color: #151515;
+}
+
+.nav__features-arrow,
+.nav__company-arrow {
+    margin-left: 17px;
+}
+
+.nav__acc {
+    display: flex;
+    flex-direction: column;
+    width: 195px;
+    text-align: center;
+    margin-left: 24px;
+}
+
+.nav__login,
+.nav__login:link,
+.nav__login:visited {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #686868;
+    text-decoration: none;
+    transition: color 0.1s;
+}
+
+.nav__login:hover {
+    color: #151515;
+}
+
+.nav__register,
+.nav__register:link,
+.nav__register:visited {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #686868;
+    text-decoration: none;
+    width: 100%;
+    border: 1.5px solid #686868;
+    border-radius: 14px;
+    padding: 12px;
+    transition: color 0.1s, border 0.1s;
+}
+
+.nav__register:hover {
+    color: #151515;
+    border: 1.5px solid #151515;
+}
+
+.sub-nav {
+    list-style: none;
+    margin-left: 24px;
+    padding-top: 8px;
+    margin-bottom: 24px;
+    transition: height 0.15s, opacity 0.25s, visibility 0.25s;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+}
+
+.sub-nav li {
+    display: flex;
+    align-items: center;
+}
+
+.sub-nav a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #686868;
+}
+
+.sub-nav img {
+    margin-right: 15.5px;
+}
+
+.second-sub-nav {
+    list-style: none;
+    margin-left: 24px;
+    padding-top: 8px;
+    margin-bottom: 24px;
+    transition: height 0.15s, opacity 0.25s, visibility 0.25s;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
 }
 
 .main {
